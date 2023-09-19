@@ -3,8 +3,14 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import cors from 'cors';
 
+//4
+import postRoutes from './routes/posts.js';
+
 //1.initialize the app
 const app = express();
+
+//5
+app.use('/posts',postRoutes);
 
 //2.
 app.use(bodyParser.json({limit:"30mb", extended: true}));
