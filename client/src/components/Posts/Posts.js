@@ -5,6 +5,7 @@ import useStyles from './styles';
 //fetch data
 import { useSelector } from "react-redux";
 const Posts =()=>{
+    // eslint-disable-next-line
     const classes = useStyles();
     const posts = useSelector((state)=>state.posts);
 
