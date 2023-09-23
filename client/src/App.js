@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Container,AppBar, Typography, Grow, Grid } from "@material-ui/core";
 
 //hook
@@ -14,6 +14,7 @@ import useStyles from './styles';
 import {getPosts} from './actions/posts'
 
 const App =()=>{
+    const [currentId, setCurrentId] = useState(null);
     const classes = useStyles();
 
     const dispatch = useDispatch(); 
@@ -36,10 +37,10 @@ const App =()=>{
                         <Grid item xs={12} sm={7}>
                             {/* xs = which is going to take full width of extra small device
                             sm = small medium which means its going to take 7 out of 12 spaces on small or larger devices */}
-                            <Posts/>
+                            <Posts setCurrentId={setCurrentId}/>
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            <Form/>
+                            <Form currentId={currentId} setCurrentId={setCurrentId}/>
                         </Grid>
                     </Grid>
                 </Container>

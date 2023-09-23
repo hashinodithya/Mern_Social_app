@@ -7,3 +7,5 @@ export const fetchPosts =()=> axios.get(url);
 // adding redax . cz all our actions going to be done with redux
 
 export const createPost = (newPost)=>axios.post(url,newPost);
+
+export const updatePost = (id, updatedPost)=>axios.patch(`${url}/${id}`, updatedPost)

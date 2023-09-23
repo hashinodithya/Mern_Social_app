@@ -12,6 +12,9 @@ export default(posts=[], action)=>{
             return [...posts, action.payload];
             // 1st- spread all posts, 2nd add new post and it saved in action payload
 
+        case 'UPDATE':
+            return posts.map((post)=>post._id===action.payload._id ? action.payload : post);
+            //output of a map is an array
         default:
             return posts;
 
