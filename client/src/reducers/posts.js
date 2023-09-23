@@ -9,8 +9,8 @@ export default(posts=[], action)=>{
 
 
         case 'CREATE':
-            return posts;
-
+            return [...posts, action.payload];
+            // 1st- spread all posts, 2nd add new post and it saved in action payload
 
         default:
             return posts;
