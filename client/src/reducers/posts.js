@@ -15,6 +15,9 @@ export default(posts=[], action)=>{
         case 'UPDATE':
             return posts.map((post)=>post._id===action.payload._id ? action.payload : post);
             //output of a map is an array
+
+        case 'DELETE':
+            return posts.filter((post)=> post._id !== action.payload )
         default:
             return posts;
 
