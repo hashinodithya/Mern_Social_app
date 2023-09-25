@@ -13,6 +13,7 @@ export default(posts=[], action)=>{
             // 1st- spread all posts, 2nd add new post and it saved in action payload
 
         case 'UPDATE':
+        case 'LIKE':
             return posts.map((post)=>post._id===action.payload._id ? action.payload : post);
             //output of a map is an array
 
