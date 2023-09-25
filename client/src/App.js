@@ -33,7 +33,7 @@ const App =()=>{
             </AppBar>
             <Grow in>
                 <Container>
-                    <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
+                    <Grid className={classes.mainContainer} container justifyContent="space-between" alignItems="stretch" spacing={3}>
                         <Grid item xs={12} sm={7}>
                             {/* xs = which is going to take full width of extra small device
                             sm = small medium which means its going to take 7 out of 12 spaces on small or larger devices */}
