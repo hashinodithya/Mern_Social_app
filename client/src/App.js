@@ -21,7 +21,7 @@ const App =()=>{
 
     useEffect(()=>{
         dispatch(getPosts());
-    },[dispatch]);
+    },[currentId, dispatch]);
     // 1 callback function
     //as the 2nd parameter we put empty array
 
